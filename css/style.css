@@ -1,0 +1,784 @@
+/*Links da fonts */
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Da+2&family=Josefin+Slab:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Mulish:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+/* Fonts dos Icons*/
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css");
+
+/*  
+MINHA COR GRADIENTE
+
+    background: #667db6;  
+    background: -webkit-linear-gradient(to left, #667db6, #0082c8, #0082c8, #667db6);  
+    background: linear-gradient(to left, #667db6, #0082c8, #0082c8, #667db6);
+
+*/ 
+
+/*Forma de criar uma VARIÁVEL para fonts*/
+:root{ 
+    --font-Titulos: "Baloo Da 2", serif;
+    --font-primária: "baloo Da2",cursive;
+    --font-secundária:"Josefin Slab",serif;
+    --font-Action:"Mulish".sans-serif;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    text-decoration: none;
+    outline: none;
+}
+
+html body{
+    width: 100%;
+    height: 100%;
+        
+}
+
+/*/////  INÍCIO - MENU //////*/
+
+.botao-menu img{
+    position: fixed;
+    right: 50px;
+    top: 30px;
+    width: 40px;
+    height: 40px;
+    z-index: 1;
+    cursor: pointer;
+}
+
+.fechar-menu img{
+    width: 20px;
+    position: relative;
+    top: -100px;
+    left: 20px;
+    cursor: pointer;
+
+}
+
+.container-menu{
+    display: none;
+    position:fixed;
+    right: 0px;
+    top: 0;
+    width: 350px;
+    height:100%;
+    background-color: white;
+    z-index: 2;
+    border-left: 2px solid #667db6 ;
+   
+}
+
+
+.sessao-menu{
+    margin-top:120px;
+}
+
+.menu li {
+    text-align:center;
+    padding: 25px 0;
+    
+}
+
+.menu a{
+    color: #667db6;
+    font-family: var(--font-secundária);
+    font-size: 2rem;
+}
+
+.menu a:hover{
+    color: #24cec5;
+    font-size: 2.3rem;
+
+}
+
+.midia-social {
+    display: flex;
+    justify-content:space-evenly;
+    padding-top: 30px;
+    
+    
+}
+
+.midia-social i{
+    color: #667db6;
+    font-size: 2rem;
+}
+
+ .midia-social i:hover{
+    color: #24cec5;
+    font-size: 2.3rem;
+}
+
+
+
+/*///// FINAL - MENU /////*/
+
+/*////  INÍCIO - HOME   /////*/
+
+header{
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;/*função para tirar o scroll de baixo e da lateral */
+    position: relative;
+}
+
+.img-bg{
+    width:100%;
+    height: 100%;
+   
+}
+
+figure.img-bg img{
+    width:100%;
+    height:100vh;
+    object-fit: cover;   
+    opacity: 0.9;
+    animation: zoom 3s
+}
+
+@keyframes zoom{
+    0% {
+        transform: scale(2);
+    }
+
+    100%{
+        transform: scale(1);
+    }
+}
+
+.banner{
+    position: absolute;
+    left: 10%;
+    top: 10%;
+    color: white;
+}
+
+.banner img{
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    animation: moveBanner 2s;
+
+}
+
+.banner h1{
+    font-family: var(--font-primária);
+    font-size: 3rem;  
+    margin: 30px 0;  
+    color: white;
+    text-shadow: 2px 2px 5px rgba(10, 10, 10, 1);
+    animation: moveBanner 2s;
+    
+}
+
+.banner p{
+    font-family: var(--font-secundária);
+    font-size: 2rem;  
+    font-weight:500;
+    margin-bottom: 20px;  
+    color: white;
+    text-shadow: 2px 2px 5px rgba(10, 10, 10, 1);
+    animation: moveBanner 2s;
+   
+}
+
+button.bt-sabiaMais, .btn-enviar{
+    width: 150px;
+    height: 50px;
+    padding: 5px;
+    font-family: var(--font-Action);
+    font-size: 1.5rem; 
+    color: white;
+    background: #667db6;  
+    background: -webkit-linear-gradient(to left, #667db6, #0082c8, #0082c8, #667db6);  
+    background: linear-gradient(to left, #667db6, #0082c8, #0082c8, #667db6);    
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    animation: moveBanner 2s;
+}
+
+button.bt-sabiaMais:hover{
+    color: #c7fcfc;
+    border: 2px solid #24cec5;
+}
+
+@keyframes moveBanner{
+    0% {
+        transform: scale(0);
+      }
+      100% {
+        transform: scale(1);
+      }
+}
+
+/* ///  HOME  //// */
+
+
+
+/* ///  CONHECIMENTOS  //// */
+
+.sessao-conhecimentos{
+    width: 100%;
+    height: 100%;
+    overflow: hidden;/*função para tirar o scroll de baixo e da lateral */
+    position: relative;
+    background-color: #c3d4df;
+    
+}
+
+.titulo-sessao-header{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;  
+    margin: 50px;  
+}
+
+.titulo-sessao-header h1{
+    font-family: var(--font-Titulos);
+    font-size: 3rem;
+    color:  #4b4b4b;   
+    border-bottom: 6px solid #7f98da;
+    margin-top: 30px;
+
+}
+
+.meus-conhecimentos{
+    display: flex;
+    justify-content: center;   
+    margin-bottom: 50px;
+   
+
+}
+
+.conhecimento{ 
+   width: 450px; 
+   height: 100%;
+   margin: 20px 15px;
+   
+}
+
+.conhecimento-header{
+    display: flex;
+    align-items: center;
+    
+}
+
+.conhecimento-header i{
+    font-size: 2rem;
+    color:  #4b4b4b; 
+}
+
+.conhecimento-header h3{
+    font-family: var(--font-secundária);
+    font-size: 1.8rem;
+    margin-left: 10px;
+    color:  #4b4b4b; 
+}
+
+.conhecimento-text p{
+    font-family: var(--font-secundária);
+    font-size: 1.3rem;
+    font-weight:600;
+    text-align: left;
+    margin-top: 20px;
+    color:  #4b4b4b; 
+ 
+}
+
+
+/* ///  PROJETOS  //// */
+
+.sessao-projetos{
+    width: 100%;
+    height: 100%;
+    background-color:#ccc;
+    overflow: hidden;
+    
+}
+
+.meus-projetos{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    text-align: center; 
+    justify-content: space-evenly;
+    margin-bottom: 70px;
+    
+
+}
+
+.card{
+    width: 250px;
+    height: 380px;
+    position: relative;   
+    margin: 20px 0;  
+}
+
+.img-card{
+    width: 250px;
+    height: 380px;
+    border-radius: 10px;
+    background-color: #262626;  
+      
+}
+
+
+.img-card img{    
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    box-shadow: 0px 0px 21px -2px rgba(0,0,0,1);
+    border-radius: 10px;       
+    transition: opacity 0.3s;
+    
+}
+
+.card:hover .img-card img{
+    opacity: 0.5;
+}
+
+.info-card{    
+    position: absolute;
+    bottom: 0;  
+    opacity: 0;
+    visibility: hidden;  
+    transition: all .3s;
+    
+}
+
+.info-card h2{
+    font-family: var(--font-Titulos);
+    font-size: 1.8rem;
+    text-align: left;
+    line-height: 28px;
+    margin-left: 20px;
+    color:white;
+    text-shadow: 2px 2px 5px rgba(10, 10, 10, 1);
+    
+}
+
+.info-card h3{
+    font-family: var(--font-secundária);
+    font-size: 1.2rem;
+    font-weight: bolder;
+    text-align: left;
+    margin-top: 15px;
+    margin-left: 20px;
+    color:#7f98da;
+    text-shadow: 1px 1px 5px rgba(10, 10, 10, 1);
+
+}
+
+.info-card p{
+    font-family: var(--font-secundária);
+    font-size: 1rem;
+    text-align: justify;
+    margin: 30px 20px;
+    color:white;
+    text-shadow: 2px 2px 5px rgba(10, 10, 10, 1);
+
+}
+
+.card:hover .info-card{
+    opacity: 1;
+    visibility: visible;
+    bottom: 30px;    
+}
+
+/* ///  PROJETOS  //// */
+
+/* ///  CONTATO  //// */
+
+
+.sessao-contato {
+    width: 100%;
+    padding-top: 100px;
+    padding-bottom: 100px;
+    background-color: #45515a;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+  }
+  
+  .contato-wrapper {
+    width: 50%;
+    height: 70%;
+    display: flex;
+    box-shadow: 0 2rem 3rem rgba(0, 0, 0, 0.5);
+    
+  }
+
+  #titulo-sessao-header{
+      margin-top:-2rem; 
+  }
+  
+  .contato-left {
+    width: 35%;
+    background: linear-gradient(rgba(15, 15, 15, 0.6), rgba(22, 22, 22, 0.9)),
+      url(../img/img_menor/contatos_01_menor.jpg);
+    background-size: cover;
+  }
+  
+  .contato-right {
+    width: 65%;
+    background-color: #eee;
+    padding: 1rem 3rem 3rem 3rem;
+  }
+  
+  .sessao-contato form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .input-group {
+    position: relative;
+  }
+  
+  .field {
+    background: transparent;
+    border: none;
+    width: 20rem;
+    font-size: 1.5rem;
+    font-family: var(--font-secundary);
+    border-bottom: 2px dashed #636363;
+    height: 3rem;
+    outline: none;
+    margin: 1rem 0;
+  }
+  
+  .input-group textarea {
+    padding-top: 1rem;
+    max-width: 25rem;
+    max-height: 3rem;
+  }
+  
+  .field-label {
+    position: absolute;
+    left: 0;
+    top: 2rem;
+    font-size: 1rem;
+    font-family: var(--font-secundary);
+    text-transform: uppercase;
+    transition: all 0.3s;
+  }
+
+   
+  .field:focus ~ label{
+    top: 0;
+    font-size: 0.7rem;
+  }
+
+    
+  .field:focus {
+    border-bottom: 1px solid;
+  }
+
+  .rodape{
+      padding: 3rem;
+      background-color: #7c3838;
+      text-align: center;
+  }
+
+  .rodape p {
+      font-size: 2rem;
+      color: white;
+      
+  }
+
+
+
+ 
+  
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*  //RESPONSIVO\\   */
+
+@media screen and (max-width: 1200px){
+    
+    .sidebar-menu{   
+        position: fixed;
+        top: 0;
+        right: -600px;
+        width: 35%;
+        height: 100vh;
+    }
+
+
+}
+
+@media screen and (max-width: 1100px){
+
+     
+    .conhecimento{ 
+       width: 250px; 
+       height: 100%;
+       margin: 50px 20px;
+       
+    }
+
+
+}
+
+
+ 
+
+@media screen and (max-width: 1000px){
+    
+    .sidebar-menu{   
+        position: fixed;
+        top: 0;
+        right: -600px;
+        width: 38%;
+        height: 100vh;
+        background-color: white;   
+        border-left: 3px solid #7f98da;
+        z-index: 50;
+        transition: all 1s;
+    }
+
+
+    .meus-conhecimentos{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        height: 100%;
+        justify-content: center;   
+       
+    
+    }
+    
+    .conhecimento{ 
+        width: 250px; 
+        height: 100%;
+        margin: 20px 20px;
+        
+     }
+
+
+
+
+    
+}
+
+
+
+@media screen and (max-width: 850px){
+    
+    .sidebar-menu{   
+        position: fixed;
+        top: 0;
+        right: -600px;
+        width: 48%;
+        height: 100vh;
+        background-color: white;   
+        border-left: 3px solid #7f98da;
+        z-index: 50;
+        transition: all 1s;
+    }
+
+}
+
+@media screen and (max-width: 690px){
+    
+    .sidebar-menu{   
+        position: fixed;
+        top: 0;
+        right: -600px;
+        width: 55%;
+        height: 100vh;
+        background-color: white;   
+        border-left: 3px solid #7f98da;
+        z-index: 50;
+        transition: all 1s;
+    }
+
+}
+
+@media screen and (max-width: 600px){
+    
+    .sidebar-menu{   
+        position: fixed;
+        top: 0;
+        right: -600px;
+        width: 60%;
+        height: 100vh;
+        background-color: white;   
+        border-left: 3px solid #7f98da;
+        z-index: 50;
+        transition: all 1s;
+    }
+
+
+    .conhecimento{ 
+        width: 450px; 
+        height: 100%;
+        margin: 20px 20px;
+        
+     }
+
+}
+
+
+@media screen and (max-width: 590px){
+
+    .banner img{
+        width: 100px;
+        height: 100px;           
+    }
+    
+    .banner h1{
+        font-size: 2.5rem;  
+              
+    } 
+
+    .sidebar-menu{   
+        position: fixed;
+        top: 0;
+        right: -600px;
+        width: 62%;
+        height: 100vh;
+        background-color: white;   
+        border-left: 3px solid #7f98da;
+        z-index: 50;
+        transition: all 1s;
+    }
+
+}
+
+@media screen and (max-width: 501px){
+
+     .banner h1{
+        
+        font-size: 2.5rem;  
+              
+    }
+    
+    .banner p{
+        font-family: var(--font-secundária);
+        font-size: 2rem;  
+        font-weight:500;
+        margin-bottom: 20px;  
+        text-shadow: 2px 2px 5px rgba(10, 10, 10, 1);
+        animation: moveBanner 2s;
+       
+    }
+
+    .menu{
+        margin-top: 25%;
+       
+    }
+
+    .sidebar-menu{   
+        position: fixed;
+        top: 0;
+        right: -600px;
+        width: 100%;
+        height: 100vh;
+        background-color: white;   
+        border-left: 3px solid #7f98da;
+        z-index: 50;
+        transition: all 1s;
+    }
+
+
+}
+
+@media screen and (max-width: 370px){
+
+    .banner h1{
+        font-size: 2rem;  
+        margin: 30px 0;  
+
+    }
+    
+    .banner p{
+        font-family: var(--font-secundária);
+        font-size: 1rem;  
+         
+    }
+    
+    button.bt-sabiaMais{
+        width: 100px;
+        height: 35px;
+        padding: 5px;
+        font-size: 1rem; 
+        
+    }
+
+    .titulo-sessao-header h1{        
+        font-size: 2rem;        
+    
+    }
+               
+    .conhecimento-header i{
+        font-size: 1.5rem;
+      
+    }
+    
+    .conhecimento-header h3{
+        font-size: 1.5rem;
+      
+    }
+    
+    .conhecimento-text p{
+        font-size: 1.1rem;
+        
+     
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+   
+    
+    
+
+
+}
